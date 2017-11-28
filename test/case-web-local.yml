@@ -17,7 +17,7 @@ pagehelper:
 
 spring:
   application:
-    name: web-case
+    name: case-web
   profiles:
       active: local
   cloud:
