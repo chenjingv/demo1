@@ -32,7 +32,7 @@ spring:
     auto: true
     proxy-target-class: true
   datasource:
-    url: jdbc:mysql://localhost:3306/web_case?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/case_web?useUnicode=true&characterEncoding=utf8
     username: root
     password: 1234
     driver-class-name: com.mysql.jdbc.Driver
