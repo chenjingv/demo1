@@ -4,11 +4,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 server:
-  port: 8081
+  port: 8083
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
-  type-aliases-package: com.isoftstone.test.caseweb.common.model
+  type-aliases-package: com.isoftstone.test.app.common.model
 pagehelper:
   helperDialect: mysql
   reasonable: true
@@ -17,7 +17,7 @@ pagehelper:
 
 spring:
   application:
-    name: case-web
+    name: app
   profiles:
       active: local
   cloud:
@@ -32,7 +32,7 @@ spring:
     auto: true
     proxy-target-class: true
   datasource:
-    url: jdbc:mysql://localhost:3306/case_web?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/app?useUnicode=true&characterEncoding=utf8
     username: root
     password: 1234
     driver-class-name: com.mysql.jdbc.Driver
