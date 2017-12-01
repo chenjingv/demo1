@@ -87,6 +87,8 @@ portal:
         timeToLiveHours: 1
 
 feign:
+  hystrix:
+    enabled: true
   compression:
     request:
       mime-types: "application/json"
