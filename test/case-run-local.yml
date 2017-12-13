@@ -1,0 +1,78 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8085
+
+files:
+ root: /run/media/user/data2/nginx/htdocs/app
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.isoftstone.test.caserun.common.model
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+spring:
+  application:
+    name: case-run
+  profiles:
+      active: local
+  cloud:
+      config:
+          profile: ${spring.profiles.active}
+          discovery:
+              enabled: true
+              serviceId: arch-config
+  resources:
+    static-locations:  classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:///${files.upload.path},file:///${files.root}
+
+  aop:
+    auto: true
+    proxy-target-class: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/case_run?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false # Enable template caching.
+# Check that the templates location exists.
+    check-template-location: true
+# Content-Type value.
+    content-type: text/html
+# Enable MVC Thymeleaf view resolution.
+    enabled: true
+# Template encoding.
+    encoding: UTF-8
+# Comma-separated list of view names that should be excluded from resolution.
+    excluded-view-names:
+# Template mode to be applied to templates. See also StandardTemplateModeHandlers.
+    mode: HTML5
+# Prefix that gets prepended to view names when building a URL.
+    prefix: classpath:/static/
+# Suffix that gets appended to view names when building a URL.
+    suffix: .html
+#template-resolver-order: # Order of the template resolver in the chain. spring.thymeleaf.view-names= # Comma-separated list of view names that can be resolved.
+  jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+      locale: zh
+      default-property-inclusion: non_empty
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 5MB
+      file-size-threshold: 0
+logging:
+    file: ${user.dir}/logs/${spring.application.name}.log
+    level:
+      org.springframework: info
+      com.netflix: info
+      com.isoftstone: debug
