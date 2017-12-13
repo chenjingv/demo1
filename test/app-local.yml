@@ -14,7 +14,10 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
-
+  
+files:
+ root:/home/test/
+ 
 spring:
   application:
     name: app
