@@ -4,14 +4,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 server:
-  port: 8085
-
-files:
- root: /run/media/user/data2/nginx/htdocs/app
+  port: 8086
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
-  type-aliases-package: com.isoftstone.test.caserun.common.model
+  type-aliases-package: com.isoftstone.test.device.common.model
 pagehelper:
   helperDialect: mysql
   reasonable: true
@@ -20,7 +17,7 @@ pagehelper:
 
 spring:
   application:
-    name: case-run
+    name: device
   profiles:
       active: local
   cloud:
@@ -36,7 +33,7 @@ spring:
     auto: true
     proxy-target-class: true
   datasource:
-    url: jdbc:mysql://localhost:3306/case_run?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/device?useUnicode=true&characterEncoding=utf8
     username: root
     password: 1234
     driver-class-name: com.mysql.jdbc.Driver
