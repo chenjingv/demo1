@@ -7,8 +7,7 @@ server:
   port: 8085
 
 files:
- upload:
-  path: /run/media/user/data2/nginx/htdocs/app
+ root: /run/media/user/data2/nginx/htdocs/app/
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
@@ -31,7 +30,7 @@ spring:
               enabled: true
               serviceId: arch-config
   resources:
-    static-locations:  classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:///${files.upload.path},file:///${files.root}
+    static-locations:  classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:///${files.root}
 
   aop:
     auto: true
