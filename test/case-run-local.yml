@@ -7,7 +7,7 @@ server:
   port: 8085
 
 files:
- root: /run/media/user/data2/nginx/htdocs/app/
+ path: /run/media/user/data2/nginx/htdocs/app/
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
