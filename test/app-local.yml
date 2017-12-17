@@ -15,9 +15,6 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
   
-files:
- path:/home/user/
- 
 spring:
   application:
     name: app
