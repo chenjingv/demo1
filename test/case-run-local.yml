@@ -7,7 +7,7 @@ server:
   port: 8083
 
 files:
- path: /home/user/data2/nginx/app/
+ path: /home/user/app/
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
