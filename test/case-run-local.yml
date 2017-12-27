@@ -20,7 +20,7 @@ pagehelper:
 
 spring:
   application:
-    name: case-run
+    name: run
   profiles:
       active: local
   cloud:
