@@ -124,6 +124,7 @@ sc:
     /v2/** = anon
     /images/** = anon
     /img/** = anon
+    /apk/** = anon
     /css/** = anon
     /index/** = anon
     /template/** =anon
